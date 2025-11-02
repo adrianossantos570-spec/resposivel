@@ -1,0 +1,776 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+/* ==================== RESETAÇÃO GLOBAL ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    text-transform: lowercase;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+/* ==================== SEÇÕES GERAIS ==================== */
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 5rem;
+}
+
+/* ========== HEADER (NÃO FIXO) ========== */
+.header {
+
+    .header {
+        border-bottom: var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(6px);
+    }
+
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    padding: 1.5rem 0;
+}
+
+/* opcional: se quiser trocar a aparência ao rolar (não muda posição) */
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+.navbar a {
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.5s ease;
+    transform-origin: center center;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+    color: var(--main-color);
+    border-bottom: 0.19rem solid var(--main-color);
+    padding-bottom: 0.10rem;
+}
+
+/* ==================== BOTÕES ==================== */
+.btn {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+/* ==================== HOME ==================== */
+.home-container {
+    background: url("imagens/Forest.png") center/cover no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.content p {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 3.5rem;
+    padding: 2.5rem 0;
+}
+
+/* ==================== CAIXAS DE TEXTO ==================== */
+.cordefundo-text {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin: 30px auto;
+    max-width: 700px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animação suave ao aparecer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== TITULOS ==================== */
+.title {
+    font-size: 5rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+
+.title span {
+    color: #ffffff;
+}
+
+/* ==================== SOBRE ==================== */
+.About .row {
+    display: flex;
+    align-items: center;
+    background-color: #141a13;
+    gap: 5rem;
+}
+
+.About .row .container-image img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.About .row .content {
+    padding: 2rem;
+}
+
+.About .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.About .row .content p {
+    font-size: 2rem;
+    color: #fff;
+    padding: 3rem 0;
+    line-height: 3rem;
+}
+
+/* ==================== MENU ==================== */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem;
+}
+
+.Menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 3rem;
+    cursor: pointer;
+    background-color: #00000042;
+    border-radius: 10px;
+}
+
+.Menu .box-container .box img {
+    height: 25rem;
+    width: auto;
+}
+
+.Menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+}
+
+.Menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.Menu .box-container .box:hover {
+    background-color: #ffffff;
+    transform: scale(1.03);
+}
+
+.Menu .box-container .box:hover>* {
+    color: var(--black);
+}
+
+/* estilo do menu mobile */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+/* ======== BOTÃO ABRIR MENU ======== */
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-abrir-menu i {
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ======== MENU MOBILE ======== */
+.menu-mobile {
+    background-color: rgba(46, 40, 40, 0.85);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    z-index: 1000;
+    overflow: hidden;
+    transition: right 0.4s ease-in-out;
+    backdrop-filter: blur(6px);
+}
+
+.menu-mobile.ativo {
+    right: 0;
+}
+
+.menu-mobile .btn-fechar {
+    text-align: right;
+    padding: 20px;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.menu-mobile nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 60px 0 0;
+}
+
+.menu-mobile nav ul li a {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    padding: 20px;
+    text-decoration: none;
+    text-align: right;
+    transition: background 0.3s;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #ff6600;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media screen and (max-width: 1020px) {
+    .btn-abrir-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1021px) {
+
+    .menu-mobile,
+    .btn-abrir-menu {
+        display: none;
+    }
+}
+
+
+
+
+/* ==================== AVALIAÇÕES ==================== */
+.Review .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    background-color: #00000042;
+}
+
+.Review .box-container .box p {
+    font-size: 2rem;
+    color: #fff;
+    padding: 3rem;
+    line-height: 2rem;
+    font-weight: lighter;
+}
+
+.Review .box-container .box h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.Review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+/* ==================== ENDEREÇO E MAPA ==================== */
+.Address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.address-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 0 6px 3px var(--main-color);
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.Address iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+.Address.highlight {
+    box-shadow: 0 0 6px 3px var(--main-color);
+}
+
+.Address.highlight iframe {
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ícones das redes sociais */
+.share {
+    padding: 1rem 0;
+}
+
+.share img {
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 30%;
+    padding: 1rem;
+}
+
+.share img:hover {
+    background-color: var(--main-color);
+}
+
+/* Animação de brilho */
+@keyframes brilho-contorno {
+    0% {
+        box-shadow: 0 0 10px 5px var(--main-color);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 10px var(--main-color);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 5px var(--main-color);
+    }
+}
+
+.address-container.highlight {
+    animation: brilho-contorno 1s ease-in-out 3;
+}
+
+/* ==================== GALERIA ==================== */
+
+
+.titulo-galeria {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 25px;
+    color: var(--main-color);
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* ==================== BOX DE IMAGENS ==================== */
+.box-imagens {
+    padding: 10px 15px;
+    background: var(--main-color);
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* ==================== CARROSSEL ==================== */
+.carrossel-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.carrossel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrossel-container::-webkit-scrollbar-thumb {
+    background: #c0c781;
+    border-radius: 10px;
+}
+
+.carrossel-container::-webkit-scrollbar-track {
+    background: #3d351e;
+}
+
+/* ==================== IMAGENS E VÍDEOS ==================== */
+.carrossel-container img,
+.carrossel-container video {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* 🔧 Correção da proporção */
+    width: auto;
+    /* largura automática */
+    height: 300px;
+    /* define uma altura padrão */
+    object-fit: contain;
+    /* mantém proporção, sem cortar */
+    background: #352f2fe1;
+    /* fundo neutro se a imagem não preencher totalmente */
+}
+
+.carrossel-container img:hover,
+.carrossel-container video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(66, 65, 60, 0.25);
+}
+
+/* ==================== TEXTO ==================== */
+.so-primeira-letra {
+    text-transform: lowercase;
+}
+
+.so-primeira-letra::first-letter {
+    text-transform: uppercase;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 600px) {
+    .titulo-galeria {
+        font-size: 32px;
+    }
+
+    .carrossel-container img,
+    .carrossel-container video {
+        height: 200px;
+        /* reduz em telas pequenas */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ======== MENU FIXO ======== */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+/* ======== SETAS DO CARROSSEL ======== */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 50%;
+    color: #2e7d32;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.seta:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.esquerda {
+    left: 10px;
+}
+
+.direita {
+    right: 10px;
+}
+
+/* ======== BOTÃO VOLTAR AO TOPO ======== */
+.botao-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.botao-topo:hover {
+    transform: scale(1.1);
+    background: #66bb6a;
+}
+
+/* ===== MENU SCROLL ===== */
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    transition: background-color 0.4s ease;
+}
+
+/* ===== SETAS DO CARROSSEL ===== */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.seta:hover {
+    background: var(--main-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.esquerda {
+    left: 10px;
+}
+
+.direita {
+    right: 10px;
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+.botao-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.botao-topo:hover {
+    transform: scale(1.1);
+    background: #e0c18a;
+}
+
+/* ===== ANIMAÇÕES SUAVES DE ENTRADA ===== */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======== RESPONSIVIDADE (menu mobile) ======== */
+@media screen and (max-width: 1020px) {
+
+    /* Deixa o conteúdo em coluna */
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    /* Some o menu normal */
+    .navbar {
+        display: none;
+    }
+
+    /* Mostra o botão do menu mobile */
+    .btn-abrir-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .btn-abrir-menu i {
+        color: #ffffff;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    /* Ajuste do menu mobile */
+    .menu-mobile {
+        display: block;
+        /* garante que o menu exista no DOM */
+        background-color: #2e2828a8;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 1000;
+        width: 70%;
+        overflow: hidden;
+        transition: right 0.4s ease-in-out;
+        backdrop-filter: blur(8px);
+    }
+
+    .menu-mobile.ativo {
+        right: 0;
+        /* mostra o menu */
+    }
+
+    .menu-mobile .btn-fechar i {
+        color: #ffffff;
+        font-size: 40px;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .menu-mobile nav ul {
+        list-style: none;
+        margin-top: 60px;
+    }
+
+    .menu-mobile nav ul li a {
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 300;
+        padding: 20px 10%;
+        display: block;
+        text-align: right;
+        transition: background 0.3s;
+    }
+
+    .menu-mobile nav ul li a:hover {
+        background-color: var(--main-color);
+    }
+
+    /* Ajuste da imagem sobre */
+    .About .row .container-image img {
+        width: 200%;
+    }
+}
+
+/* ======== Menu mobile escondido em telas grandes ======== */
+@media screen and (min-width: 1021px) {
+
+    .btn-abrir-menu,
+    .menu-mobile {
+        display: none;
+    }
+}
